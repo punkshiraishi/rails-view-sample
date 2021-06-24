@@ -1,3 +1,17 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.test {
+  color: red;
+}
+
+[data-scope='scope1'] {
+  .aaaa {
+    color: red;
+  }
+
+  .cccc {
+    color: blue;
+  }
+}
