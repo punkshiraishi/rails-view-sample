@@ -3,7 +3,7 @@
   <div class="text-lg"><%= @tweet.content %></div>
   <div class="flex flex-row justify-end space-x-3">
     <div><%= button_to 'Edit', edit_tweet_path(@tweet), method: :get, class: "base-button" %></div>
-    <div><%= button_to 'Destroy', @tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "base-button" %></div>
+    <div><%= button_to 'Delete', @tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "base-button" %></div>
   </div>
 </div>
 <% end %>
