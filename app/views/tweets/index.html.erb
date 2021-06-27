@@ -2,10 +2,30 @@
 
 <div class="py-10 text-2xl font-bold">Tweets</div>
 <div class="flex flex-col space-y-3">
+<%= form_with(model: @tweet) do |form| %>
+  <% if @tweet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tweet.errors.count, "error") %> prohibited this @tweet from being saved:</h2>
+
+      <ul>
+        <% @tweet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "base-button" %>
+  </div>
+<% end %>
     <% @tweets.each do |tweet| %>
       <%= render(TweetComponent.new(tweet: tweet))%>
     <% end %>
 </div>
 <br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
