@@ -1,0 +1,8 @@
+<div class="border boder-solid-2 bg-blue-100 rounded flex flex-col space-y-2 p-3">
+  <div class="text-lg"><%= @tweet.content %></div>
+  <div class="flex flex-row space-x-3">
+    <div><%= button_to 'Show', @tweet, class: "base-button" %></div>
+    <div><%= button_to 'Edit', edit_tweet_path(@tweet), class: "base-button" %></div>
+    <div><%= button_to 'Destroy', @tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "base-button" %></div>
+  </div>
+</div>
