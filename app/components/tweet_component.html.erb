@@ -1,10 +1,10 @@
 <%# TODO: link_to だと全体がリンクになるため、内部のボタンだけをクリックすることができない %>
-<%= link_to(@tweet) do %>
-<div class="border boder-solid-2 bg-blue-100 rounded p-3 h-64 flex flex-col justify-between space-y-2 ">
-  <div class="text-lg"><%= @tweet.content %></div>
+<div class="border boder-solid-2 bg-blue-100 rounded p-3 flex flex-col justify-between space-y-2 ">
+  <%= link_to(@tweet) do %>
+    <pre class="text-lg"><%= @tweet.content %></pre>
+  <% end %>
   <div class="flex flex-row justify-end space-x-3">
     <div><%= button_to 'Edit', edit_tweet_path(@tweet), method: :get, class: "base-button" %></div>
     <div><%= button_to 'Delete', @tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "base-button" %></div>
   </div>
 </div>
-<% end %>
