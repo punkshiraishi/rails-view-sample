@@ -21,5 +21,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/forms'),   //追加
+    require('@tailwindcss/typography'),  //追加
+    require('@tailwindcss/aspect-ratio'),   //追加
+  ]
 }
