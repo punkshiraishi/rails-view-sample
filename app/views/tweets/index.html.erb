@@ -1,7 +1,7 @@
 <div class="w-80 h-screen py-5 flex flex-col">
   <div class="py-5 text-2xl font-bold">Tweets</div>
   <div class="sticky top-0 bg-white pb-3">
-    <%= render(TweetFormComponent.new(tweet: @tweet), class: "p-10 w-1") do %>
+    <%= render(TweetFormComponent.new(tweet: @tweet)) do %>
       <div class="text-blue-400"><%= notice %></div>
     <% end %>
   </div>

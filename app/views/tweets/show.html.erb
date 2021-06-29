@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<%= render(TweetComponent.new(tweet: @tweet))%>
-
-<%= link_to 'Back', tweets_path %>
+<div class="w-80 h-screen py-5 flex flex-col">
+  <%= link_to 'Back', tweets_path, class: "link-text" %>
+  <%= render(TweetComponent.new(tweet: @tweet))%>
+</div>

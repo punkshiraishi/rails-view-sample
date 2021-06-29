@@ -11,13 +11,11 @@
     </div>
   <% end %>
 
-  <div class="">
-    <%= form.label :content,  hidden: true %>
-    <%= form.text_area :content, class: "w-full" %>
-  </div>
+  <%= form.label :content,  hidden: true %>
+  <%= form.text_area :content, class: "base-textarea w-full" %>
 
   <div class="flex flex-col space-y-1">
-		<div><%= content %></div>
-    <%= form.submit class: "base-button" %>
+    <div><%= content %></div>
+    <%= form.submit class: "btn btn-outline-blue" %>
   </div>
 <% end %>

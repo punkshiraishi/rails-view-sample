@@ -1,7 +1,19 @@
 .link-text {
-  @apply text-blue-400;
+  @apply text-blue-400 underline;
 }
 
-.base-button {
-  @apply border border-blue-500 border-solid rounded p-1 bg-white;
+.btn {
+  @apply rounded p-1 cursor-pointer;
+}
+
+.btn-white {
+  @apply btn bg-white;
+}
+
+.btn-outline-blue {
+  @apply bg-white border border-blue-500 border-solid;
+}
+
+.base-textarea {
+  @apply border border-blue-500 border-solid rounded;
 }

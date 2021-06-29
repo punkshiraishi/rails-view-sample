@@ -1,6 +1,5 @@
-<h1>Editing Tweet</h1>
+<div class="w-80 h-screen py-5 flex flex-col">
+  <%= link_to 'Back', tweets_path, class: "link-text" %>
+  <%= render(TweetFormComponent.new(tweet: @tweet))%>
+</div>
 
-<%= render(TweetFormComponent.new(tweet: @tweet))%>
-
-<%= link_to 'Show', @tweet %> |
-<%= link_to 'Back', tweets_path %>
